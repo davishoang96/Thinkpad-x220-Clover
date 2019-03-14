@@ -109,7 +109,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v darkwake=2</string>
+		<string>-v darkwake=2 slide=0</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
@@ -125,7 +125,7 @@
 		<key>NoEarlyProgress</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>0</integer>
+		<integer>5</integer>
 		<key>UseAlternateLogo</key>
 		<true/>
 		<key>XMPDetection</key>
@@ -200,8 +200,15 @@
 		<integer>0</integer>
 		<key>EDID</key>
 		<dict>
+			<key>Custom</key>
+			<data>
+			AP///////wAGEPKcAAAAABoVAQSVGg54Au8Fl1dUkiciUFQAAAAB
+			AQEBAQEBAQEBAQEBAQEBEhtWWFAAGTAwIDYAFZwQAAAYAAAA/ABD
+			b2xvciBMQ0QKICAgAAAA/gBBVU8KICAgICAgICAgAAAA/gBCMTI1
+			WFcwMSBWMCAKAEI=
+			</data>
 			<key>Inject</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>Inject</key>
 		<dict>
@@ -275,21 +282,21 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>09/21/2018</string>
+		<string>04/10/18</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP91.88Z.F000.B00.1809210851</string>
+		<string>MBP81.88Z.0050.B00.1804101331</string>
 		<key>Board-ID</key>
-		<string>Mac-6F01561E16C75D06</string>
+		<string>Mac-94245B3640C91C81</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>W892274044NDM6DCB</string>
+		<string>W892073004NDM6D1H</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
-		<string>MacBookPro9,2</string>
+		<string>1.0</string>
 		<key>ChassisAssetTag</key>
 		<string>MacBook-Aluminum</string>
 		<key>ChassisManufacturer</key>
@@ -297,7 +304,7 @@
 		<key>ChassisType</key>
 		<string>0x0A</string>
 		<key>EfiVersion</key>
-		<string>222.0.0.0.0</string>
+		<string>82.0.0.0.0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>FirmwareFeatures</key>
@@ -313,11 +320,11 @@
 		<key>PlatformFeature</key>
 		<string>0xFFFF</string>
 		<key>ProductName</key>
-		<string>MacBookPro9,2</string>
+		<string>MacBookPro8,1</string>
 		<key>SerialNumber</key>
-		<string>C1MH8MY0DTY3</string>
+		<string>W89H8YYGDH2G</string>
 		<key>SmUUID</key>
-		<string>3D79CBED-D88F-4C80-B491-90DAEADA97D8</string>
+		<string>8A3A8198-FFF5-4EF8-B31B-1AB0C3B37C78</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
