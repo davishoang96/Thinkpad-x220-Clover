@@ -72,15 +72,6 @@
 			<key>SuspendOverride</key>
 			<false/>
 		</dict>
-		<key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>CpuPm</string>
-			</dict>
-		</array>
 		<key>HaltEnabler</key>
 		<false/>
 		<key>ResetAddress</key>
@@ -98,7 +89,7 @@
 				<key>PStates</key>
 				<false/>
 				<key>PluginType</key>
-				<true/>
+				<false/>
 			</dict>
 		</dict>
 		<key>SortedOrder</key>
@@ -109,7 +100,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v darkwake=2 slide=0</string>
+		<string>-v darkwake=8</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
@@ -125,7 +116,7 @@
 		<key>NoEarlyProgress</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>5</integer>
+		<integer>0</integer>
 		<key>UseAlternateLogo</key>
 		<true/>
 		<key>XMPDetection</key>
@@ -134,7 +125,7 @@
 	<key>CPU</key>
 	<dict>
 		<key>TurboDisable</key>
-		<true/>
+		<false/>
 	</dict>
 	<key>Devices</key>
 	<dict>
@@ -226,28 +217,12 @@
 		<true/>
 		<key>Debug</key>
 		<false/>
+		<key>KernelCpu</key>
+		<true/>
+		<key>KernelPm</key>
+		<true/>
 		<key>KextsToPatch</key>
 		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Replace 4th port with VGA</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AQIEABAHAAAQBwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
-				AAAAAwQAAAAEAAAJAAAABAYAAAAEAAAJAAAA
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>AppleIntelSNBGraphicsFB</string>
-				<key>Replace</key>
-				<data>
-				AQIEABITAAASEwAABQMAAAIAAAAwAAAAAgUAAAAEAAAH
-				AAAAAwQAAAAEAAAJAAAABgIAABAAAAAJAAAA
-				</data>
-			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>TRIM for SSD</string>
@@ -264,6 +239,40 @@
 				<key>Replace</key>
 				<data>
 				AAAAAAAAAAAA
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Patch VRAM</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				x0XQAAAAIA==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSNBGraphicsFB</string>
+				<key>Replace</key>
+				<data>
+				x0XQAAAAQA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Black Screen Patch (board-id) (c) Pike R. Alpha</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				Ym9hcmQtaWQ=
+				</data>
+				<key>Name</key>
+				<string>AppleGraphicsDevicePolicy</string>
+				<key>Replace</key>
+				<data>
+				Ym9hcmQtaXg=
 				</data>
 			</dict>
 		</array>
